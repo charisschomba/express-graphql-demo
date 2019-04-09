@@ -1,6 +1,8 @@
+require('dotenv').config()
+
 import mongoose from "mongoose";
 
-const db = 'mongodb://localhost:27017/users-auth';
+const db = process.env.MONGO_URI;
 
 const  dbConn = () => {
   return mongoose.connect(
